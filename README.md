@@ -99,15 +99,6 @@ Gazebo with the mobile robot, 2-axis arm, and test_world.sdf environment.
 RViz displaying the robot’s URDF and arm transformations.
 The arm moving in response to joint position commands.
 
-## 📁 Project Structure Overview
-
-my_robot_v1.0/
-bot_ws/
-├── src/
-│   ├── bot_description/     # URDF and Gazebo assets
-│   ├── bot_controller/      # Robot control nodes
-│   ├── bot_bringup/         # Launch files
-│   ├── bot_script/          # Edge detection and logic
 
 
 ## 🛠️ Project Details
