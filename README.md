@@ -21,76 +21,76 @@ Follow the official ROS 2 installation instructions:
 ```bash
 source /opt/ros/jazzy/setup.bash
 echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
-
+```
 ### 3️⃣ Set RMW Implementation (CycloneDDS)
 ```bash
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 echo "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp" >> ~/.bashrc
-
-4️⃣ Source .bashrc
-bash
+```
+### 4️⃣ Source .bashrc
+```bash
 source ~/.bashrc
-
-🧠 Workspace Setup
-5️⃣ Install Git (if not already)
-bash
+```
+## 🧠 Workspace Setup
+### 5️⃣ Install Git (if not already)
+```bash
 sudo apt install git
-
-6️⃣ Clone This Repository
-bash
+```
+### 6️⃣ Clone This Repository
+```bash
 cd ~
 git clone https://github.com/yayabash/my_robot_v1.0.git
 cd ~/my_robot_v1.0
-
-⚙️ Setup ROS Dependencies
-7️⃣ Install rosdep and Initialize
-bash
+```
+## ⚙️ Setup ROS Dependencies
+### 7️⃣ Install rosdep and Initialize
+```bash
 sudo apt install python3-rosdep
 sudo rosdep init
 rosdep update
-
-8️⃣ Install Package Dependencies
-bash
+```
+### 8️⃣ Install Package Dependencies
+```bash
 rosdep install --from-paths src -y --ignore-src
-
-🧱 Build the Workspace
-bash
+```
+## 🧱 Build the Workspace
+```bash
 cd ~/my_robot_v1.0
 colcon build
-
-9️⃣ Source the Workspace
-bash
+```
+### 9️⃣ Source the Workspace
+```bash
 source install/setup.bash
 echo "source ~/my_robot_v1.0/install/setup.bash" >> ~/.bashrc
-
+```
 🧩 (Optional) Shell Autocompletion
-bash
+```bash
 sudo apt install python3-colcon-argcomplete
 source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> ~/.bashrc
-
+```
 🚀 Run the Simulation
-1️⃣ Terminal 1: Launch Gazebo with the Robot
-bash
+### 1️⃣ Terminal 1: Launch Gazebo with the Robot
+```bash
 ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
-
+```
 This launches the Gazebo simulation with the mobile robot and arm in the test_world.sdf environment.
 
-2️⃣ Terminal 2: Launch RViz for Visualization
-bash
+### 2️⃣ Terminal 2: Launch RViz for Visualization
+```bash
 ros2 launch my_robot_description display.launch.py
-
+```
 This opens RViz with the robot’s URDF and arm visualization.
 
-3️⃣ Terminal 3: Test Arm Control
+### 3️⃣ Terminal 3: Test Arm Control
 
 Publish joint positions to test the arm’s JointPositionController plugins:
-bash
+```bash
 # Example: Control first joint
 ros2 topic pub /arm_base_joint_position_controller/command std_msgs/msg/Float64 "{data: 1.57}"
 # Example: Control second joint
 ros2 topic pub /forearm_joint_position_controller/command std_msgs/msg/Float64 "{data: 0.785}"
-
+```
 Adjust values to test arm motion (e.g., between 0 and π/2 as per joint limits).
 
 You should now see:
@@ -99,7 +99,7 @@ You should now see:
     RViz displaying the robot’s URDF and arm transformations.
     The arm moving in response to joint position commands.
 
-📁 Project Structure Overview
+## 📁 Project Structure Overview
 
 my_robot_v1.0/
 ├── src/
@@ -114,7 +114,7 @@ my_robot_v1.0/
 ├── my_robot_v1.0.mp4                     # Simulation video (19 MB)
 ├── LICENSE                               # MIT License
 
-🛠️ Project Details
+## 🛠️ Project Details
 
     Mobile Base: Defined in mobile_base.xacro and mobile_base_gazebo.xacro.
     Robotic Arm: 2-axis arm defined in arm.xacro and standalone_arm.urdf.xacro.
@@ -123,6 +123,6 @@ my_robot_v1.0/
     Gazebo Integration: Uses JointStatePublisher and JointPositionController plugins for arm control, with ROS2-Gazebo bridge (gazebo_bridge.yaml).
     RViz: Visualizes the robot and arm transformations using urdf_config.rviz.
 
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
