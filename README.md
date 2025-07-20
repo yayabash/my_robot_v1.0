@@ -102,36 +102,12 @@ The arm moving in response to joint position commands.
 ## 📁 Project Structure Overview
 
 my_robot_v1.0/
-
+bot_ws/
 ├── src/
-
-│   ├── my_robot_bringup/          # Launch files and Gazebo configurations
-
-│   │   ├── launch/                # Launch file directory
-
-│   │   │   ├── my_robot_gazebo.launch.xml  # Launches Gazebo simulation
-
-│   │   ├── config/                # Configuration directory
-
-│   │   │   ├── gazebo_bridge.yaml # ROS2-Gazebo bridge config
-
-│   │   ├── worlds/                # World files directory
-
-│   │   │   ├── test_world.sdf     # Gazebo world file
-
-│   ├── my_robot_description/      # URDF/Xacro files and RViz configs
-
-│   │   ├── urdf/                  # Robot and arm URDF/Xacro files
-
-│   │   ├── launch/                # Launch file directory
-
-│   │   │   ├── display.launch.py  # RViz launch file
-
-│   │   ├── rviz/                  # RViz configuration directory
-
-│   │   │   ├── urdf_config.rviz   # RViz configuration
-
-├── LICENSE                        # MIT License
+│   ├── bot_description/     # URDF and Gazebo assets
+│   ├── bot_controller/      # Robot control nodes
+│   ├── bot_bringup/         # Launch files
+│   ├── bot_script/          # Edge detection and logic
 
 
 ## 🛠️ Project Details
