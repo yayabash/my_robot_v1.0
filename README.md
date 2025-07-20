@@ -2,7 +2,7 @@
 
 This repository contains a ROS2-based mobile robot simulation with a 2-axis robotic arm, developed as the final project for the *ROS2 For Beginners Level 2* course. The robot integrates a mobile base with a robotic arm, simulated in Gazebo and visualized in RViz. The arm is controlled using `JointStatePublisher` and `JointPositionController` plugins.
 
-📽️ **Simulation Video**: Watch the robot in action: [ROS2 Mobile Robot with Arm Simulation](https://drive.google.com/file/d/1nkZ1L2uFsTICfmxhn911zOp4ncV8mBN/view?usp=sharing)
+📽️ **Simulation Video**: Watch the robot in action: [ROS2 Mobile Robot with Arm Simulation](https://drive.google.com/file/d/1nkZ1LZqUfsTICFmxhn91IZOp4ncV8mBN/view?usp=sharing)
 
 ## 📦 Prerequisites
 
