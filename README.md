@@ -95,24 +95,29 @@ Adjust values to test arm motion (e.g., between 0 and π/2 as per joint limits).
 
 You should now see:
 
-    Gazebo with the mobile robot, 2-axis arm, and test_world.sdf environment.
-    RViz displaying the robot’s URDF and arm transformations.
-    The arm moving in response to joint position commands.
+Gazebo with the mobile robot, 2-axis arm, and test_world.sdf environment.
+RViz displaying the robot’s URDF and arm transformations.
+The arm moving in response to joint position commands.
 
 ## 📁 Project Structure Overview
 
 my_robot_v1.0/
 ├── src/
 │   ├── my_robot_bringup/          # Launch files and Gazebo configurations
-│   │   ├── launch/my_robot_gazebo.launch.xml  # Launches Gazebo simulation
-│   │   ├── config/gazebo_bridge.yaml          # ROS2-Gazebo bridge config
-│   │   ├── worlds/test_world.sdf             # Gazebo world file
-│   ├── my_robot_description/       # URDF/Xacro files and RViz configs
-│   │   ├── urdf/                         # Robot and arm URDF/Xacro files
-│   │   ├── launch/display.launch.py       # RViz launch file
-│   │   ├── rviz/urdf_config.rviz          # RViz configuration
-├── my_robot_v1.0.mp4                     # Simulation video (19 MB)
-├── LICENSE                               # MIT License
+│   │   ├── launch/                # Launch file directory
+│   │   │   ├── my_robot_gazebo.launch.xml  # Launches Gazebo simulation
+│   │   ├── config/                # Configuration directory
+│   │   │   ├── gazebo_bridge.yaml # ROS2-Gazebo bridge config
+│   │   ├── worlds/                # World files directory
+│   │   │   ├── test_world.sdf     # Gazebo world file
+│   ├── my_robot_description/      # URDF/Xacro files and RViz configs
+│   │   ├── urdf/                  # Robot and arm URDF/Xacro files
+│   │   ├── launch/                # Launch file directory
+│   │   │   ├── display.launch.py  # RViz launch file
+│   │   ├── rviz/                  # RViz configuration directory
+│   │   │   ├── urdf_config.rviz   # RViz configuration
+├── my_robot_v1.0.mp4              # Simulation video (19 MB)
+├── LICENSE                        # MIT License
 
 ## 🛠️ Project Details
 
