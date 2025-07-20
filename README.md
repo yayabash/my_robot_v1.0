@@ -119,6 +119,7 @@ my_robot_v1.0/
 ├── my_robot_v1.0.mp4              # Simulation video (19 MB)
 ├── LICENSE                        # MIT License
 
+
 ## 🛠️ Project Details
 
     Mobile Base: Defined in mobile_base.xacro and mobile_base_gazebo.xacro.
